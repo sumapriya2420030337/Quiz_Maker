@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Profile</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Profile</h2>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button id="saveProfile">Save Profile</button>
+    <button onclick="location.href='index.html'">Back to Dashboard</button>
+  </div>
+
+  <script>
+    const nameInput = document.getElementById("name");
+    const saveBtn = document.getElementById("saveProfile");
+
+    nameInput.value = localStorage.getItem("username") || "";
+
+    saveBtn.addEventListener("click", () => {
+      localStorage.setItem("username", nameInput.value);
+      alert("Profile Saved!");
+    });
+  </script>
+</body>
+</html>

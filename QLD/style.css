@@ -1,0 +1,68 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+/* Container style */
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+body.dark .container {
+  background: #1e1e1e;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #4caf50;
+  color: white;
+  font-size: 16px;
+}
+button:hover { opacity: 0.9; }
+
+/* Progress bar */
+#progress {
+  width: 100%;
+  background: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+#progress-bar {
+  height: 10px;
+  background: #4caf50;
+  width: 0%;
+  border-radius: 5px;
+  transition: width 0.5s;
+}
+
+/* Quiz options */
+.option-btn {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #030000;
+  background: #000000;
+}
+.option-btn.correct { background-color: #4caf50; color: white; }
+.option-btn.wrong { background-color: #f44336; color: white; }
